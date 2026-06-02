@@ -736,8 +736,40 @@
     }
 
     /* ── RESPONSIVE ── */
+    @media (max-width: 1145px) {
+      #services {
+        padding: 30px 48px;
+      }
+      #about {
+        padding: 30px 48px;
+      }
+      #hero {
+        padding: 80px 48px 60px;
+      }
+      #contact {
+        padding: 30px 48px;
+      }
+      footer {
+        padding: 24px 48px;
+      }
+    }
+
     @media (max-width: 900px) {
-      nav { padding: 0 24px; }
+      .nav-logo {
+        height: 50px;
+      }
+      .form-row {
+        gap: 0;
+      }
+      .hero-subtitle {
+        font-size: clamp(20px, 1vw, 80px);
+      }
+
+      .hero-desc {
+        font-size: clamp(13.5px, 1vw, 80px);
+      }
+
+      nav { padding: 8px 24px; }
       .nav-links { display: none; }
       .nav-links.open {
         display: flex;
@@ -769,6 +801,19 @@
     }
 
     @media (max-width: 480px) {
+      .hero-title {
+        font-size: 45px;
+      }
+      .btn {
+        width: 100%;
+        justify-content: center;
+      }
+      .hero-subtitle {
+        font-size: 16px;
+      }
+      .hero-desc {
+        font-size: 12px;
+      }
       .services-grid { grid-template-columns: 1fr; }
       .service-card:last-child { grid-column: auto; }
     }
