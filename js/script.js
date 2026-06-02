@@ -3,6 +3,7 @@
   const navLinks  = document.getElementById('navLinks');
   hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('open');
+    hamburger.classList.toggle('hamburger_animation');
   });
 
   /* Close nav on link click */
