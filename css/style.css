@@ -1,11 +1,13 @@
-@font-face {
-  font-family: gotham-font-main;
-  src: url("../font/gotham_black.otf");
-}
+@import url(https://db.onlinewebfonts.com/c/77f6ecce8b3e56796f721316092c7e87?family=Sebino+Soft+Medium);
 
 @font-face {
-  font-family: gotham-font-thin;
-  src: url("../font/gotham_light.otf");
+    font-family: "Sebino Soft Medium";
+    src: url("https://db.onlinewebfonts.com/t/77f6ecce8b3e56796f721316092c7e87.eot");
+    src: url("https://db.onlinewebfonts.com/t/77f6ecce8b3e56796f721316092c7e87.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/77f6ecce8b3e56796f721316092c7e87.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/77f6ecce8b3e56796f721316092c7e87.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/77f6ecce8b3e56796f721316092c7e87.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/77f6ecce8b3e56796f721316092c7e87.svg#Sebino Soft Medium")format("svg");
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -27,7 +29,7 @@
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'gotham-font-main', sans-serif;
+      font-family: 'Sebino Soft Medium', sans-serif;
       background: var(--dark);
       color: var(--text);
       font-size: 15px;
@@ -68,6 +70,7 @@
 
     .logo-icon {
       width: 34px;
+      font-family: 'Barlow Condensed', sans-serif;
       height: 34px;
       background: var(--blue);
       border-radius: 6px;
@@ -85,6 +88,7 @@
       font-weight: 700;
       font-size: 14px;
       line-height: 1.2;
+      font-family: 'Barlow Condensed', sans-serif;
       color: #fff;
       text-transform: uppercase;
       letter-spacing: 0.5px;
@@ -220,6 +224,7 @@
     }
 
     .hero-title {
+      font-family: 'Barlow Condensed', sans-serif;
       font-weight: 600;
       font-size: clamp(52px, 7vw, 80px);
       line-height: 0.95;
@@ -235,7 +240,6 @@
     .hero-subtitle {
       font-weight: 600;
       font-size: 25px;
-      font-family: 'gotham-font-thin', sans-serif;
       color: #fff;
       margin-bottom: 22px;
       opacity: 0;
@@ -246,7 +250,6 @@
     .hero-desc {
       font-size: 16px;
       color: var(--white);
-      font-family: 'gotham-font-thin', sans-serif;
       line-height: 1.8;
       margin-bottom: 10px;
       font-weight: 300;
@@ -343,6 +346,7 @@
     }
 
     .section-title {
+      font-family: 'Barlow Condensed', sans-serif;
       font-weight: 700;
       font-size: clamp(30px, 3.5vw, 42px);
       color: #fff;
@@ -365,6 +369,7 @@
     }
 
     .about-text h3 {
+      font-family: 'Barlow Condensed', sans-serif;
       font-weight: 700;
       font-size: 26px;
       color: #fff;
@@ -410,6 +415,7 @@
       border-radius: 14px;
       display: flex;
       align-items: center;
+      font-family: 'Barlow Condensed', sans-serif;
       justify-content: center;
       font-weight: 800;
       font-size: 48px;
@@ -418,11 +424,13 @@
 
     /* ── SERVICES ── */
     #services {
-      padding: 30px 88px;
-      background: #0F1015;
-      background: linear-gradient(61deg, rgba(15, 16, 21, 1) 0%, rgba(37, 39, 48, 1) 71%, rgba(122, 128, 153, 1) 100%);
-      text-align: center;
-    }
+    padding: 44px 88px;
+    background-color: #0F1015;
+    background-image:
+        radial-gradient(circle at 50% 50%, #1a1c22 2px, transparent 2px);
+    background-size: 40px 40px;
+    text-align:center;
+}
 
     .services-header {
       margin-bottom: 12px;
@@ -483,6 +491,7 @@
 
     .service-name {
       font-weight: 700;
+      font-family: 'Barlow Condensed', sans-serif;
       font-size: 20px;
       line-height: 26px;
       color: #fff;
@@ -593,6 +602,7 @@
     .inquiry-form h2 {
       font-weight: 700;
       font-size: 32px;
+      font-family: 'Barlow Condensed', sans-serif;
       color: #fff;
     }
 
@@ -682,7 +692,6 @@
 
     .footer-copy {
       font-size: 12px;
-      font-family: 'gotham-font-thin', sans-serif;
       color: var(--text-dim);
     }
 
@@ -730,7 +739,6 @@
 
     .reveal.visible {
       opacity: 1;
-      font-family: 'gotham-font-thin', sans-serif;
       transform: translateY(0);
     }
 
