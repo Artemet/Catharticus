@@ -442,7 +442,7 @@
       margin: 0 auto;
       display: grid;
       grid-template-columns: repeat(5, 1fr);
-      gap: 5%;
+      gap: 3%;
     }
 
     .service-card {
@@ -516,7 +516,7 @@
       bottom: 10px;
     }
 
-    .inquiry-form .title-bar {
+    .contact-direct .title-bar {
       margin-top: 0;
     }
 
@@ -598,91 +598,111 @@
       color: black;
     }
 
-    /* FORM */
-    .inquiry-form h2 {
+    .contact-link {
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+
+    .contact-link:hover {
+      color: var(--blue-dark);
+      text-decoration: underline;
+    }
+
+    /* ── DIRECT CONTACT BLOCK ── */
+    .contact-direct h2 {
       font-weight: 700;
       font-size: 32px;
       font-family: 'Barlow Condensed', sans-serif;
       color: #fff;
     }
 
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 36px;
-    }
-
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      margin-bottom: 16px;
-    }
-
-    .form-group label {
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 1px;
-      color: black;
-    }
-
-    .form-group input,
-    .form-group textarea {
-      border: 1px solid lightgray;
-      color: black;
+    .contact-direct-lead {
       font-size: 14px;
-      padding: 12px 14px;
-      border-radius: 2px;
-      outline: none;
-      transition: border-color 0.25s;
-      resize: vertical;
+      color: black;
+      margin: 16px 0 28px;
+      line-height: 1.7;
     }
 
-    .form-group input::placeholder,
-    .form-group textarea::placeholder {
-      color: rgba(122, 128, 153, 0.5);
+    .direct-contact-card {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 22px 24px;
+      margin-bottom: 18px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      background: rgba(255,255,255,0.02);
+      text-decoration: none;
+      transition: border-color 0.25s, background 0.25s, transform 0.2s;
     }
 
-    .form-group input:focus,
-    .form-group textarea:focus {
+    .direct-contact-card:hover {
       border-color: var(--blue);
+      background: rgba(42,79,255,0.08);
+      transform: translateY(-2px);
     }
 
-    .form-group textarea { min-height: 120px; }
-
-    .btn-submit {
-      width: 100%;
-      justify-content: center;
-      padding: 15px;
-      font-size: 12px;
+    .direct-contact-icon {
+      width: 52px;
+      height: 52px;
       background: var(--blue);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .direct-contact-icon svg {
+      width: 24px;
+      height: 24px;
+      stroke: #fff;
+      fill: none;
+    }
+
+    .whatsapp-icon svg  {
+      fill: #fff;
+    }
+
+    .direct-contact-icon.whatsapp-icon {
+      background: #25D366;
+    }
+
+    .direct-contact-icon.whatsapp-icon svg {
       color: #fff;
-      border: none;
-      cursor: pointer;
-      letter-spacing: 1.5px;
-      transition: background 0.25s, transform 0.2s;
+      stroke: none;
     }
 
-    .btn-submit:hover {
-      background: var(--blue-dark);
-    }
-
-    .form-message {
-      display: none;
-      margin-top: 14px;
-      padding: 12px 16px;
-      background: rgba(42,79,255,0.15);
-      border: 1px solid rgba(42,79,255,0.4);
-      color: #99b0ff;
+    .direct-contact-label {
       font-size: 13px;
-      border-radius: 2px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .direct-contact-value {
+      font-size: 20px;
+      font-weight: 700;
+      color: black;
+      font-family: 'Barlow Condensed', sans-serif;
+      letter-spacing: 0.5px;
     }
 
     /* ── FOOTER ── */
     footer {
       background: var(--dark);
       border-top: 1px solid var(--border);
-      padding: 24px 88px;
+      padding: 32px 88px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .footer-top {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -726,6 +746,47 @@
 
     .footer-social:hover svg { stroke: #fff; }
 
+    /* ── FOOTER LEGAL / COMPLIANCE ── */
+    .footer-legal {
+      border-top: 1px solid var(--border);
+      padding-top: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .footer-legal-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    .footer-legal-icon {
+      width: 14px;
+      height: 14px;
+      stroke: var(--text-dim);
+      fill: none;
+      flex-shrink: 0;
+    }
+
+    .footer-legal p {
+      font-size: 11.5px;
+      line-height: 1.7;
+      color: var(--text-dim);
+      max-width: 980px;
+    }
+
+    .footer-legal strong {
+      color: var(--blue);
+      font-weight: 700;
+    }
+
     /* ── ANIMATIONS ── */
     @keyframes fadeUp {
       to { opacity: 1; transform: translateY(0); }
@@ -743,11 +804,6 @@
     }
 
     /* ── RESPONSIVE ── */
-    @media (max-width: 1687px) {
-      .services-grid {
-        gap: 4%;
-      }
-    }
     @media (max-width: 1443px) {
       .services-grid {
         gap: 40px;
@@ -779,9 +835,6 @@
     @media (max-width: 1093px) {
       .nav-logo {
         height: 50px;
-      }
-      .form-row {
-        gap: 0;
       }
       .hero-subtitle {
         font-size: clamp(20px, 1vw, 80px);
@@ -817,9 +870,9 @@
       .services-grid { grid-template-columns: repeat(2, 1fr); }
       .service-card:last-child { grid-column: span 2; }
 
-      .form-row { grid-template-columns: 1fr; }
-
-      footer { padding: 20px 24px; flex-direction: column; text-align: center; }
+      footer { padding: 20px 24px; }
+      .footer-top { flex-direction: column; text-align: center; }
+      .footer-legal { text-align: left; }
     }
 
     @media (max-width: 480px) {
